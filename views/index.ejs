@@ -1,5 +1,5 @@
 <%- include("header.ejs") %>
-<div class="main_container <%#blog_ejs.length<=3 ? "blog3":""%>">
+<div class="main_container">
   <% if (locals.blog_ejs.length>0){%>
   <% blog_ejs.forEach(function(lost){%>
   <div class="blog"><a href="/BLOG?num=<%= lost.post_count %>">
