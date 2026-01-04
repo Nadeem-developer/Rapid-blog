@@ -96,15 +96,14 @@ body {
 .main_container {
   flex: 1;
   width: 100%;
-  min-height: 90vh;
-  margin-top: 50px;
-  padding: 0px 40px;
+  min-height: calc(100vh - 80px);
+  padding: 50px 40px 20px 40px;
   gap: 20px;
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
-    align-content: flex-start;
+  align-content: flex-start;
 }
 .No_blog {
   padding: 200px 0px;
