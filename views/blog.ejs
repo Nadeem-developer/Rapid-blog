@@ -1,0 +1,21 @@
+<%- include("header.ejs") %> <% if(locals.blog){%>
+<div class="blogMain">
+  <div class="blog_contaner">
+    <h1 class="blogTitle"><%=blog.title %></h1>
+    <hr>
+    <pre class="blogContent"><%=blog.content %></pre>
+  </div>
+</div>
+<div class="blog_button">
+    <form action="/edit" method="post">
+    <input type="hidden" name="edit_postNumber" value="<%= blog.post_count %>" />
+    <input class="btn" type="submit" value="EDIT" />
+  </form>
+  <form action="/delete" method="post">
+    <input type="hidden" name="delete_number" value="<%= blog.post_count %>" />
+    <input class="btn" type="submit" value="DELETE" />
+  </form>
+</div>
+<% }else{ %>
+<h2>this blog is not exist, please go to <a href="/">home</a></h2>
+<% } %> <%- include("footer.ejs") %>

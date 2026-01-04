@@ -1,0 +1,9 @@
+<%- include("header.ejs") %>
+<div class="formContaner">
+<form action="/ADD" method="post">
+  <textarea class="title_input" required name="title" autocomplete="off" placeholder="Title of Blog" required></textarea>
+ <textarea class="content_input" required name="content" autocomplete="off" placeholder="Content of Blog" required></textarea>
+<input class="btn" type="submit" value="SUBMIT">
+</form>
+</div>
+<%- include("footer.ejs") %>

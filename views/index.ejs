@@ -1,0 +1,13 @@
+<%- include("header.ejs") %>
+<div class="main_container <%#blog_ejs.length<=3 ? "blog3":""%>">
+  <% if (locals.blog_ejs.length>0){%>
+  <% blog_ejs.forEach(function(lost){%>
+  <div class="blog"><a href="/BLOG?num=<%= lost.post_count %>">
+    <h2 class="number"><%=lost.post_count%>.<%= lost.title %></h2>
+   </a></div>
+  <% }); %>
+  <%}else{%>
+  <h2 class="No_blog">Thare is no Blogs please <a href="/ADD">add!</a></h2>
+  <% }%>
+</div>
+<%- include("footer.ejs") %>

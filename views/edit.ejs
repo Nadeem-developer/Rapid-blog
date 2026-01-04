@@ -1,0 +1,14 @@
+<%- include("header.ejs") %>
+<% if (locals.blog_ejs.length>0){%>
+  <div class="formContaner">
+<form action="/editDone" method="post">
+  <input type="hidden" name="edit_postNumber" value="<%= editBlog.post_count %>" />
+  <textarea class="title_input" required name="title" autocomplete="off" placeholder="title of blog" required><%= editBlog.title %></textarea>
+  <textarea class="content_input" required name="content" autocomplete="off" placeholder="Content of Blog" required><%= editBlog.content %></textarea>
+  <input class="btn" type="submit" value="UPDATE" />
+</form>
+</div>
+<% }else{ %>
+    <h2>first <a href="/ADD">Add</a> blog and than edit 😀</h2>
+    <% } %>
+<%- include("footer.ejs") %>
